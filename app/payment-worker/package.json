@@ -1,0 +1,9 @@
+{
+  "name": "payment-worker",
+  "version": "1.0.0",
+  "main": "worker.js",
+  "dependencies": {
+    "amqplib": "^0.10.4",
+    "pg": "^8.11.5"
+  }
+}
