@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: orders-api
-        image: SEU_USUARIO_DOCKERHUB/orders-api:latest # Substitua aqui
+        image: rgrsousa/orders-api:latest # Substitua aqui
         ports:
         - containerPort: 3000
         envFrom:

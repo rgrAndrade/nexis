@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: payment-worker
-        image: SEU_USUARIO_DOCKERHUB/payment-worker:latest # Substitua aqui
+        image: rgrsousa/payment-worker:latest # Substitua aqui
         envFrom:
         - configMapRef:
             name: app-config
