@@ -7,6 +7,8 @@ npm-debug.log
 # Ignorar diretório de binários e módulos baixados
 **/ .terraform/
 
+**/.terraform/
+
 # Ignorar arquivos de estado local do Terraform
 *.tfstate
 *.tfstate.*
