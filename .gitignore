@@ -2,3 +2,16 @@ node_modules/
 npm-debug.log
 .DS_Store
 .env
+
+
+# Ignorar diretório de binários e módulos baixados
+**/ .terraform/
+
+# Ignorar arquivos de estado local do Terraform
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Ignorar credenciais e arquivos de configuração gerados
+**/nexis-cluster-config
+kubeconfig*
