@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nexis-gitops
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/rgrAndrade/nexis.git' # Altere para o seu repositório público
+    targetRevision: HEAD
+    path: k8s # A pasta que ele vai monitorar
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true     # Se você deletar um arquivo no Git, ele deleta no K8s
+      selfHeal: true  # Se alguém alterar o K8s manualmente, o Argo desfaz e volta ao padrão do Git
