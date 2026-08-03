@@ -1,0 +1,15 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: orders-api-monitor
+  namespace: default
+  labels:
+    release: kube-prometheus-stack
+spec:
+  selector:
+    matchLabels:
+      app: orders-api
+  endpoints:
+  - port: http                 # <--- Aponta para a porta chamada 'http' no Service
+    path: /metrics
+    interval: 10s
